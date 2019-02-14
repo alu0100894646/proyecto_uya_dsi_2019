@@ -41,7 +41,7 @@ Para la url: https://www3.gobiernodecanarias.org/istac/api/operations/v1.0/opera
 Qué peticiones desencadena la consulta.
 	La petición operations?limit=5 que es la página principal de la url y luego un documento del tipo svg+xml
 ¿Qué tipo de petición estás realizando?
-	Petición de tipo GET.
+	Petición de tipo GET y POST.
 Qué código de estatus devuelve.
 	En ambos casos 200 Ok
 Qué DNS tiene el servidor
