@@ -2,7 +2,7 @@
 
 ### Experiencia con el Lector de Pantalla Integrado ChromeVox
 
-Para empezar debemos instalar la extensión ChromeVox y activarla mediante la combinación de teclas 'Ctrl + Alt +Z'.
+Para empezar debemos instalar la extensión ChromeVox y activarla mediante la combinación de teclas `Ctrl + Alt +Z`.
 
 La instalación es sencilla y tan pronto como se activa, ChromeVox empieza a leer el contenido de la pantalla.
 
