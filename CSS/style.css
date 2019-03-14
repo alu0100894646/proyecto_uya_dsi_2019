@@ -15,6 +15,7 @@
 }
 
 #header {
+  background-image: url("libro.png");
   background-color: grey;
   height: 100px;
 }
@@ -48,10 +49,11 @@ ul#menu, ul#menu li {
 ul#menu li a {
   background-color: inherit;
   display: inline-block;
-  padding: 30px 26px 5px 25px;
+  padding: 0.3em;
+  margin-bottom: 0.7em;
   text-decoration: none;
   text-transform: uppercase;
-  color: #FFF;
+  color: grey;
 }
 ul#menu li a:hover {
   color: #FFF;
@@ -100,4 +102,3 @@ footer p, footer a {
   background-color: inherit;
   text-align: center;
 }
-
