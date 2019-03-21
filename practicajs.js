@@ -10,7 +10,35 @@ function conversor_divisas() {
   }
 
   var divisa = document.getElementById("inputdivisa").value;
-  console.log(conversor.euros_to_kunas);
+  var multiplier = 1;
+  //console.log(conversor.euros_to_kunas);
   console.log(divisa);
+
+  if (selected_divisa == to_divisa)
+      multiplier = 1;
+  else {
+      if (selected_divisa == "Euro") {
+          if (to_divisa == "Libra")
+              multiplier = conversor.euros_to_libra;
+          if (to_divisa == "Kuna")
+              multiplier = conversor.euros_to_kunas;
+      }
+
+      if (selected_divisa == "Libra") {
+          if (to_divisa == "Euro")
+              multiplier = (1 / conversor.euros_to_libra);
+          if (to_divisa == "Kuna")
+            multiplier = conversor.libra_to_kunas;
+      }
+
+      if (selected_divisa == "Kuna") {
+          if (to_divisa == "Euro")
+              multiplier = 1 / conversor.euros_to_kunas;
+          if (to_divisa == "Libra")
+              multiplier == 1 / conversor.libra_to_kunas;
+      }
+  }
+  console.log(multiplier);
+  document.getElementById("result_divisa").innerHTML = "</br><p> El resultado de la conversion es :" + (divisa * multiplier) + "<p>";
 
 }
