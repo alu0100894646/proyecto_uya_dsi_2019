@@ -39,6 +39,46 @@ function conversor_divisas() {
       }
   }
   console.log(multiplier);
-  document.getElementById("result_divisa").innerHTML = "</br><p> El resultado de la conversion es :" + (divisa * multiplier) + "<p>";
+  document.getElementById("result_divisa").innerHTML = "</br><p> El resultado de la conversion es :" + (divisa * multiplier) + "</p>";
 
+}
+
+function importe_factura() {
+    var factura = {
+        "id_factura": "1",
+        "articulos": [
+            {
+                "nombre": "Huevos",
+                "precio":"1.5"
+            },
+            {
+                "nombre": "Leche",
+                "precio":"2"
+            },
+            {
+                "nombre": "Azucar",
+                "precio":"1"
+            }
+        ]
+    }
+    var total_factura = 0;
+    console.log(factura.articulos);
+
+    for (var i in factura.articulos) {
+        document.getElementById("ej_2").innerHTML += "</br><p>Articulo " + i + " " + factura.articulos[i].nombre + " precio: " + factura.articulos[i].precio+"</p>"
+        total_factura += (factura.articulos[i].precio * 1.07);
+    }
+    console.log(total_factura);
+    document.getElementById("ej_2").innerHTML += "</br><p> El precio total de la factura " + factura.id_factura + " es de: " + total_factura + " euro(s)</p>";
+
+
+}
+
+function count_elements() {
+    var num_p = document.getElementsByTagName("p");
+    console.log("Número de elementos p " + num_p.length);
+    var num_a = document.getElementsByTagName("a");
+    console.log("Número de elementos a " + num_a.length);
+    var num_ul = document.getElementsByTagName("ul");
+    console.log("Número de elementos ul " + num_ul.length);
 }
