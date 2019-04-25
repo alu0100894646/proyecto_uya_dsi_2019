@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>   
+</head>
+<body>
+    <h1 id="nombre"> </h1> 
+
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBGGvCkXYD8erHMl2euUgEgedD-RIYFZZE",
+        authDomain: "validacion-formulario.firebaseapp.com",
+        databaseURL: "https://validacion-formulario.firebaseio.com",
+        projectId: "validacion-formulario",
+        storageBucket: "validacion-formulario.appspot.com",
+        messagingSenderId: "64130085130"
+      };
+      firebase.initializeApp(config);
+
+
+
+  var obj = {
+        autor: 'Patrick Rufhus',
+        titulo: 'El nombre del viento'
+  };
+  var myDatabase = firebase.database();
+  var refDB = myDatabase.ref('libro2');
+  refDB.set(obj);
+
+  var nombre = document.getElementById('nombre');
+  var dbRef = firebase.database().ref().child('libro1');
+  dbRef.on('value', snap => nombre.innerText = snap.val());
+</script>
+</body>
