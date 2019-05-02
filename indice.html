@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario</title>
+  
+  
+  
+    
+
+  
+</head>
+
+<body>
+
+  <div class="contenedor-formulario">
+    <div class="wrap">
+        <form class="formulario" name="formulario_registro" method="post" id="formulario">
+        <div>
+            <div class="input-group">
+                <input type="text" id="nombre" name="nombre"/>
+                <label class="label" for="nombre">Usuario</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" name="email"/>
+                <label class="label" for="email">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="contraseña" id="contraseña" name="contraseña"/>
+                <label class="label" for="contraseña">Contraseña</label>
+            </div>
+
+            <div class="input-group radio">
+                <input type="radio" name="sexo" id="hombre"/>
+                <label class="label" for="hombre">Hombre</label>
+                <input type="radio" name="sexo" id="mujer"/>
+                <label class="label" for="mujer">Mujer</label>
+            </div>
+
+
+            <input type="submit" name="btn-submit" value="Send"/>
+
+        </div>
+    </form>
+    </div>
+
+
+</div>
+ 
+    <script src="https://www.gstatic.com/firebasejs/5.11.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAFlF9buXw6HuxZGfw9ANjnaQkSP9_dBKI",
+        authDomain: "formulary-f1e07.firebaseapp.com",
+        databaseURL: "https://formulary-f1e07.firebaseio.com",
+        projectId: "formulary-f1e07",
+        storageBucket: "formulary-f1e07.appspot.com",
+        messagingSenderId: "405576541388"
+      };
+      firebase.initializeApp(config);
+      const form = document.getElementById('formulario')
+      form.addEventListener('submit', enviarForm);
+      function enviarForm(event){
+          event.preventDefault();
+
+       var nombre = document.getElementById('nombre'); 
+       var email = document.getElementById('email');
+       var hombre = document.getElementById('hombre'); 
+       var mujer = document.getElementById('mujer');
+       var contraseña = document.getElementById('contraseña');
+       
+       const data = {
+         'name': nombre.value,
+         'email': email.value,
+         'hombre': hombre.value,
+         'mujer': mujer.value,
+         'contraseña': contraseña.value
+       }; 
+       saveContactForm(data);
+
+      };
+    
+    function saveContactForm(data) {
+    firebase.database().ref('contact').push(data) 
+    .then(function() {
+alert('dato almacenado correctamente');})
+ .catch(function(error) {
+ console.log('detectado un error', error);
+ });
+};
+   
+   </script>
+</body>
+  
+</html>
