@@ -34,10 +34,14 @@
             </div>
 
             <div class="input-group radio">
-                <input type="radio" name="sexo" id="hombre"/>
-                <label class="label" for="hombre">Hombre</label>
-                <input type="radio" name="sexo" id="mujer"/>
-                <label class="label" for="mujer">Mujer</label>
+              <select id="sexo">
+                <option value="hombre">
+                Hombre
+                </option>
+                <option value ="mujer">
+                Mujer
+                </option>
+                </select>
             </div>
 
 
@@ -64,24 +68,45 @@
       firebase.initializeApp(config);
       const form = document.getElementById('formulario')
       form.addEventListener('submit', enviarForm);
+      
       function enviarForm(event){
           event.preventDefault();
 
        var nombre = document.getElementById('nombre'); 
        var email = document.getElementById('email');
-       var hombre = document.getElementById('hombre'); 
-       var mujer = document.getElementById('mujer');
+       var sexo = document.getElementById('sexo'); 
+       
        var contraseña = document.getElementById('contraseña');
        
-       const data = {
+      
+              
+       var data = {
          'name': nombre.value,
          'email': email.value,
-         'hombre': hombre.value,
-         'mujer': mujer.value,
+         'sexo': sexo.value,
          'contraseña': contraseña.value
        }; 
-       saveContactForm(data);
+ 
+ /* var myDatabase = firebase.database();
+  
+      myDatabase postref = ref.child('contact');
+      myDatabase pushedref = postreft.push();
+      String postId = pushedPostRef.getKey();
 
+    firebase.database.ref.child('contact/' + 'path').(once('name').then(function(snapshot) {
+    if (snapshot.exists()) {
+    alert("Usuario en uso");
+    } else {
+    console.log("Usuario no en uso");
+  }
+}); */
+        if(validateEmail(email)){
+            saveContactForm(data);
+        }
+       else{
+        alert('Email no valido');
+       }
+       
       };
     
     function saveContactForm(data) {
@@ -92,7 +117,10 @@ alert('dato almacenado correctamente');})
  console.log('detectado un error', error);
  });
 };
-   
+   function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
    </script>
 </body>
   
