@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!--<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>-->
-  <script src="js/app.js"></script>
+
 </head>
 <body>
 
@@ -35,7 +35,7 @@
       <option value="3">Drama</option>
       <option value="4">Romántico</option>
     </select>
-    
+
   </div>
 
 <legend>Seleccione el idioma:</legend>
@@ -48,8 +48,7 @@
         <input type="checkbox" checked="checked" id="ingles"/>
         <span>Inglés</span>
       </label>
- 
-
+      
     <div class="row col s4 offset-s5">
         <button class="btn waves-effect waves-light" aria-label="boton" type="submit" name="action" onclick="enviarForm()">
                         Enviar
@@ -59,41 +58,36 @@
 
     </form>
   </div>
-  
+
 
 
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  
-  <script src="js/materialize.js"></script>
-  <!--<script src="js/init.js"></script>-->
-  <script type="text/javascript">
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
-  </script>
-
+  <script src="website/js/materialize.min.js"></script>
+  <script src="app.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
-
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAFlF9buXw6HuxZGfw9ANjnaQkSP9_dBKI",
+      authDomain: "formulary-f1e07.firebaseapp.com",
+      databaseURL: "https://formulary-f1e07.firebaseio.com",
+      projectId: "formulary-f1e07",
+      storageBucket: "formulary-f1e07.appspot.com",
+      messagingSenderId: "405576541388",
+      appId: "1:405576541388:web:44f4753dbf6c680d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAFlF9buXw6HuxZGfw9ANjnaQkSP9_dBKI",
-    authDomain: "formulary-f1e07.firebaseapp.com",
-    databaseURL: "https://formulary-f1e07.firebaseio.com",
-    projectId: "formulary-f1e07",
-    storageBucket: "formulary-f1e07.appspot.com",
-    messagingSenderId: "405576541388",
-    appId: "1:405576541388:web:44f4753dbf6c680d"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
-
-   </body>
+</body>
 </html>
