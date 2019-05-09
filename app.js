@@ -1,9 +1,9 @@
-
+function enviarForm(){
       // Initialize Firebase
 
 
       const form = document.getElementById('formulario')
-      
+
 
       function enviarForm(event){
           event.preventDefault();
@@ -33,4 +33,4 @@ alert('dato almacenado correctamente');})
  });
 };
 
- 
+}
