@@ -8,6 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/login_css.css"/>
     <title>ForoIdea-Login</title>
 </head>
 <body>
@@ -23,11 +24,11 @@
             </ul>
         </div>
     </nav>
-    <div class="row">
+    <div class="row" id="main_login">
         <div class="card-panel blue lighten-5 col s6 offset-s3"><h1 class="center-align">¡Identificate!</h1></div>
 
         <div class="row">
-            <div class="col s6 offset-s3">
+            <div class="col s6 offset-s3 blue lighten-5">
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate">
@@ -45,6 +46,9 @@
                         Enviar
                         <i class="material-icons right">send</i>
                     </button>
+                </div>
+                <div class="row col s6 red-text text-accent-4 offset-s3" id=error_message>
+
                 </div>
 
             </div>
@@ -75,3 +79,11 @@
     </script>
 </body>
 </html>
+<footer class="page-footer blue lighten-1">
+  <div class="footer-copyright">
+      <div class="container">
+          © 2019 Proyecto para UYA y DSI en la ULL
+          <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
+      </div>
+  </div>
+</footer>

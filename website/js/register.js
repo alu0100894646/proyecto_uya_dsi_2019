@@ -6,6 +6,7 @@ function register() {
     var password = document.getElementById("password").value;
     var conf_password = document.getElementById("conf_password").value;
     console.log(email + "    " + password);
+    var error_message = document.getElementById("error_message");
 
     if (email == conf_email && password == conf_password) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
@@ -16,14 +17,14 @@ function register() {
                 if (errorCode == 'auth/weak-password') {
                     alert('The password is too weak.');
                 } else {
-                    alert(errorMessage);
+                    error_message.innerHTML = "<p>"+errorMessage+"</p>";
                 }
                 console.log(error);
             });
     }
     else {
-        var error_message = document.getElementById("error_message");
-        error_message.innerHTML = "<p> El Email o la contraseña introducidos no coinciden </p>"; 
+
+        error_message.innerHTML = "<p> El Email o la contraseÃ±a introducidos no coinciden </p>";
     }
 
     firebase.auth().onAuthStateChanged(function (user) {
