@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+ARIA 1.0//EN" "http://www.w3.org/WAI/ARIA/schemata/xhtml-aria-1.dtd">
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -18,17 +18,18 @@
     <form class="col s12" id="formulario">
       <div class="row">
         <div class="input-field col s6">
-          <input placeholder="Titulo" id="titulo" type="text" class="validate">
+          <input placeholder="Titulo" id="titulo" type="text" class="validate" aria-describedby="descripciontitulo" aria-required="true" required>
           <label for="titulo"></label>
+    <p id="descripciontitulo" class="ayuda">Escriba un titulo exsitente</p>
         </div>
         <div class="input-field col s6">
-          <input placeholder="Autor" id="autor" type="text" class="validate">
+          <input placeholder="Autor" id="autor" type="text" class="validate" aria-required="true" required>
           <label for="autor"></label>
         </div>
       </div>
   <div class="input-field col s12">
     <select multiple id="genero">
-      <option value="" disabled selected>Género</option>
+      <option value="" disabled selected></option>
       <option value="1">Aventuras</option>
       <option value="2">Ciencia Ficción</option>
       <option value="3">Drama</option>
@@ -36,22 +37,25 @@
     </select>
     
   </div>
-      <p>
+
+<legend>Seleccione el idioma:</legend>
       <label>
         <input type="checkbox" id="español" />
         <span>Español</span>
       </label>
-    </p>
-    <p>
+
       <label>
         <input type="checkbox" checked="checked" id="ingles"/>
         <span>Inglés</span>
       </label>
-    </p>  
+ 
 
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-      <i class="material-icons right">send</i>
-    </button>
+    <div class="row col s4 offset-s5">
+        <button class="btn waves-effect waves-light" aria-label="boton" type="submit" name="action" onclick="enviarForm()">
+                        Enviar
+              <i class="material-icons right">send</i>
+        </button>
+    </div>
 
     </form>
   </div>
@@ -61,6 +65,7 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
   <script src="js/materialize.js"></script>
   <!--<script src="js/init.js"></script>-->
   <script type="text/javascript">
@@ -69,6 +74,26 @@
   });
   </script>
 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAFlF9buXw6HuxZGfw9ANjnaQkSP9_dBKI",
+    authDomain: "formulary-f1e07.firebaseapp.com",
+    databaseURL: "https://formulary-f1e07.firebaseio.com",
+    projectId: "formulary-f1e07",
+    storageBucket: "formulary-f1e07.appspot.com",
+    messagingSenderId: "405576541388",
+    appId: "1:405576541388:web:44f4753dbf6c680d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 
    </body>
 </html>
