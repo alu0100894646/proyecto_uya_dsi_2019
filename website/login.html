@@ -13,37 +13,37 @@
 </head>
 <body>
     <nav role="navigation">
-        <div class="nav-wrapper blue lighten-1" aria-label="Menú principal">
+        <div class="nav-wrapper blue lighten-1" aria-label="MenÃº principal">
             <a href="#" class="brand-logo" role="link">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li role="menuitem"><a href="sass.html" role="link">Inicio</a></li>
-                <li role="menuitem"><a href="badges.html" role="link">¿Qué ofrecemos?</a></li>
-                <li role="menuitem"><a href="collapsible.html" role="link">Sobre nosotros</a></li>
-                <li role="menuitem"><a href="register.html" role="link">Registrate</a></li>
-                <li role="menuitem"><a href="login.html" role="link">Identifícate</a></li>
+            <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
+                <li role="none"><a href="sass.html" role="menuitem">Inicio</a></li>
+                <li role="none"><a href="badges.html" role="menuitem">Â¿QuÃ© ofrecemos?</a></li>
+                <li role="none"><a href="collapsible.html" role="menuitem">Sobre nosotros</a></li>
+                <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
+                <li role="none"><a href="login.html" role="menuitem">IdentifÃ­cate</a></li>
             </ul>
         </div>
     </nav>
     <div class="row" id="main_login">
-        <div class="card-panel blue lighten-5 col s6 offset-s3"><h1 class="center-align">¡Identificate!</h1></div>
+        <div class="card-panel blue lighten-5 col s6 offset-s3" role="heading" aria-level="1"><h1 class="center-align">Â¡Identificate!</h1></div>
 
         <div class="row">
-            <div class="col s6 offset-s3 blue lighten-5">
+            <div class="col s6 offset-s3 blue lighten-5" role="log">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Correo Electrónico</label>
-                        <span class="helper-text" data-error="email no válido" data-success="¡Correcto!">ejemplo@dominio.com</span>
+                        <input id="email" type="email" class="validate" aria-required="true" aria-invalid="false" aria-labelledby="correo">
+                        <label id="correo" for="email">Correo ElectrÃ³nico</label>
+                        <span class="helper-text" data-error="email no vÃ¡lido" data-success="Â¡Correcto!" role="alert">ejemplo@dominio.com</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Contraseña</label>
+                        <input id="password" type="password" class="validate" aria-required="true" aria-invalid="false" aria-labelledby="contraseÃ±a">
+                        <label id="contraseÃ±a" for="password">ContraseÃ±a</label>
                     </div>
                 </div>
                 <div class="row col s4 offset-s5">
-                    <button class="btn waves-effect waves-light" type="submit" name="action" onclick="login()">
+                    <button class="btn waves-effect waves-light" type="submit" name="action" onclick="login()" aria-label="Send">
                         Enviar
                         <i class="material-icons right">send</i>
                     </button>
@@ -80,11 +80,12 @@
     </script>
 </body>
 </html>
-<footer class="page-footer blue lighten-1">
+<footer class="page-footer blue lighten-1" role="contentinfo">
   <div class="footer-copyright">
       <div class="container">
-          © 2019 Proyecto para UYA y DSI en la ULL
+          Â© 2019 Proyecto para UYA y DSI en la ULL
           <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
       </div>
   </div>
 </footer>
+

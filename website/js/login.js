@@ -16,8 +16,9 @@ function login() {
             window.location.href = "succes_login.html";
         } else {
             var error_message = document.getElementById("error_message");
-            error_message.innerHTML= "<p> Correo electrocino o contraseña erroneos </p>"
+            error_message.innerHTML= "<p role="alert"> Correo electrocino o contraseña erroneos </p>"
             console.log("error");
         }
     });
 }
+

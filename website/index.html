@@ -14,57 +14,57 @@
     <body>
         <div>
             <nav role="navigation">
-                <div class="nav-wrapper blue lighten-1" aria-label="Menú principal">
+                <div class="nav-wrapper blue lighten-1" aria-label="MenÃº principal">
                     <a href="#" class="brand-logo" role="link">Logo</a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li role="menuitem"><a href="sass.html" role="link">Inicio</a></li>
-                        <li role="menuitem"><a href="badges.html" role="link">¿Qué ofrecemos?</a></li>
-                        <li role="menuitem"><a href="collapsible.html" role="link">Sobre nosotros</a></li>
-                        <li role="menuitem"><a href="register.html" role="link">Registrate</a></li>
-                        <li role="menuitem"><a href="login.html" role="link">Identifícate</a></li>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
+                        <li role="none"><a href="sass.html" role="menuitem">Inicio</a></li>
+                        <li role="none"><a href="badges.html" role="menuitem">Â¿QuÃ© ofrecemos?</a></li>
+                        <li role="none"><a href="collapsible.html" role="menuitem">Sobre nosotros</a></li>
+                        <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
+                        <li role="none"><a href="login.html" role="menuitem">IdentifÃ­cate</a></li>
                     </ul>
                 </div>
             </nav>
 
-            <div id="index-banner" class="parallax-container">
+            <div id="index-banner" class="parallax-container" role="main" aria-labelledby="name_header">
                 <div class="section no-pad-bot">
                     <div class="container">
                         <br />
-                        <h1 class="header center teal-text text-lighten-2" role="heading" aria-level="1">ForoIdea</h1>
-                        <div class="row center">
-                            <h5 class=" header col s12 light" role="heading" aria-level="2">Descripción/frase</h5>
+                        <h1 id="name_header" class="header center teal-text text-lighten-2" role="heading" aria-level="1">ForoIdea</h1>
+                        <div class="row center" aria-labelledby="description_line">
+                            <h5 id="description_line" class=" header col s12 light" role="heading" aria-level="2">DescripciÃ³n/frase</h5>
                         </div>
                     </div>
                 </div>
-                <div class="parralax"><img src="" alt="Parallax-Background Image 1" /></div>
+                <div class="parralax"><img src="" alt="Parallax-Background Image 1"/></div>
             </div>
 
-            <div id="icon-description" class="container deep-purple accent-1">
-                <div class="section">
+            <div id="icon-description" class="container deep-purple accent-1" aria-label="Items aÃºn por definir">
+                <div class="section" role="region">
                     <div class="row">
 
-                        <div class="col s12 m4">
-                            <div class="icon-block">
+                        <div class="col s12 m4" role="presentation">
+                            <div class="icon-block" aria-describedby="desc_1">
 
-                                <h2 class="center brown-text"><i class="material-icons">Icon1</i></h2>
+                                <h2 class="center brown-text"><i class="material-icons" tabindex="0">Icon1</i></h2>
                                 <h5 class="center">Item1</h5>
-                                <p class="light center">Descripción</p>
+                                <p id="desc_1" class="light center">DescripciÃ³n</p>
                             </div>
                         </div>
 
-                        <div class="col s12 m4">
-                            <div class="icon-block">
-                                <h2 class="center brown-text"><i class="material-icons">Icon2</i></h2>
+                        <div class="col s12 m4" role="presentation">
+                            <div class="icon-block" aria-describedby="desc_2">
+                                <h2 class="center brown-text"><i class="material-icons" tabindex="-1">Icon2</i></h2>
                                 <h5 class="center">Item1</h5>
-                                <p class="light center">Descripción</p>
+                                <p id="desc_2" class="light center">DescripciÃ³n</p>
                             </div>
                         </div>
 
-                        <div class="col s12 m4">
-                            <div class="icon-block">
-                                <h2 class="center brown-text"><i class="material-icons">Icon3</i></h2>
+                        <div class="col s12 m4" role="presentation">
+                            <div class="icon-block" aria-describedby="desc_3">
+                                <h2 class="center brown-text"><i class="material-icons" tabindex="-1">Icon3</i></h2>
                                 <h5 class="center">Item1</h5>
-                                <p class="light center">Descripción</p>
+                                <p id="desc_3" class="light center">DescripciÃ³n</p>
                             </div>
                         </div>
                     </div>
@@ -74,28 +74,29 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
 </html>
-<footer class="page-footer blue lighten-1">
+<footer class="page-footer blue lighten-1" role="contentinfo">
     <div class="container">
         <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Trabajo Final</h5>
-                <p class="grey-text text-lighten-4">Descripción del trabajo final</p>
+            <div class="col l6 s12" aria-describedby="project" aria-labelledby="name_project">
+                <h5 id="name_project" class="white-text">Trabajo Final</h5>
+                <p id="project" class="grey-text text-lighten-4">DescripciÃ³n del trabajo final</p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Integrantes</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="#!">Alberto Dorta Gozález</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Jaime Rodríguez Pérez</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">Ariane Zanardi Francisco</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">José Francisco Rodríguez Hernández</a></li>
+                <ul role="menu">
+                    <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">Alberto Dorta GozÃ¡lez</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">Jaime RodrÃ­guez PÃ©rez</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">Ariane Zanardi Francisco</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">JosÃ© Francisco RodrÃ­guez HernÃ¡ndez</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2019 Proyecto para UYA y DSI en la ULL
+            Â© 2019 Proyecto para UYA y DSI en la ULL
             <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
         </div>
     </div>
 </footer>
+
