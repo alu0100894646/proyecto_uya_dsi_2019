@@ -1,23 +1,16 @@
-function enviarForm(){
-      // Initialize Firebase
-    const form = document.getElementById('formulario');
-       var id = 2;
-       var titulo = document.getElementById('titulo');
-       var autor = document.getElementById('autor');
-       var español = document.getElementById('español');
-       var ingles = document.getElementById('ingles');
-       var genero = document.getElementById('genero');
+function enviarForm() {
+    var database = firebase.database();
+    var ref = firebase.database().ref('books/');
+    console.log(database);
+    
+    var max_id;
+    ref.once('value').then(function (snapshot) {
+        max_id = snapshot.numChildren();
 
-       var data = {
-         'titulo': "libro random",
-         'autor': "agapito",
-       };
+        ref.push({
+            id: max_id,
+            Titulo: "Prueba",
 
-      var database_ref = firebase.database().ref('books/');
-      var newInput = database_ref.push();
-
-      newInput.set({
-        id: data
-      });
-    console.log("enviado");
+        });
+    });
 };
