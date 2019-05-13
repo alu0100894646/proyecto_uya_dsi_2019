@@ -1,12 +1,7 @@
 function enviarForm(){
       // Initialize Firebase
-      const form = document.getElementById('formulario')
-
-
-      function enviarForm(event){
-          event.preventDefault();
-        };
-       var id = 4;
+    const form = document.getElementById('formulario');
+       var id = 2;
        var titulo = document.getElementById('titulo');
        var autor = document.getElementById('autor');
        var español = document.getElementById('español');
@@ -14,33 +9,15 @@ function enviarForm(){
        var genero = document.getElementById('genero');
 
        var data = {
-         'titulo': titulo.value,
-         'autor': autor.value,
-         'español': español.value,
-         'ingles': ingles.value,
-         'genero': genero.value
+         'titulo': "libro random",
+         'autor': "agapito",
        };
 
-      var database_ref = firebase.database().ref();
+      var database_ref = firebase.database().ref('books/');
       var newInput = database_ref.push();
 
-
       newInput.set({
-        autor: autor,
-        genero:genero,
-        titulo: titulo
+        id: data
       });
-
-
-
-
-
-      /*function saveContactForm(data) {
-          firebase.database().ref('formulary-f1e07').push(data).then(function() {
-      alert('dato almacenado correctamente');})
-       .catch(function(error){
-       console.log('detectado un error', error);
-       });
-     };*/
-
+    console.log("enviado");
 };
