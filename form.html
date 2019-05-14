@@ -20,7 +20,6 @@
         <div class="input-field col s6">
           <input placeholder="Titulo" id="titulo" type="text" class="validate" aria-describedby="descripciontitulo" aria-required="true" required>
           <label for="titulo"></label>
-    <p id="descripciontitulo" class="ayuda">Escriba un titulo exsitente</p>
         </div>
         <div class="input-field col s6">
           <input placeholder="Autor" id="autor" type="text" class="validate" aria-required="true" required>
@@ -28,24 +27,23 @@
         </div>
       </div>
   <div class="input-field col s12">
-    <select multiple id="genero">
-      <option value="" disabled selected></option>
-      <option value="1">Aventuras</option>
-      <option value="2">Ciencia Ficción</option>
-      <option value="3">Drama</option>
-      <option value="4">Romántico</option>
+    <select  id="genero" multiple="multiple">
+      <option value="Aventuras">Aventuras</option>
+      <option value="Ciencia_Ficcion">Ciencia Ficción</option>
+      <option value="Drama">Drama</option>
+      <option value="Romantico">Romántico</option>
     </select>
 
   </div>
 
     <legend>Seleccione el idioma:</legend>
       <label>
-        <input type="checkbox" id="español" />
+        <input type="checkbox" id="español" value="español"/>
         <span>Español</span>
       </label>
 
       <label>
-        <input type="checkbox" checked="checked" id="ingles"/>
+        <input type="checkbox" id="ingles" value="ingles" />
         <span>Inglés</span>
       </label>
       
