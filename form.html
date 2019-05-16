@@ -27,7 +27,7 @@
         </div>
       </div>
   <div class="input-field col s12">
-    <select  id="genero" multiple="multiple">
+    <select  id="genero" multiple="multiple" required>
       <option value="Aventuras">Aventuras</option>
       <option value="Ciencia_Ficcion">Ciencia Ficción</option>
       <option value="Drama">Drama</option>
@@ -35,7 +35,7 @@
     </select>
 
   </div>
-
+  <div>
     <legend>Seleccione el idioma:</legend>
       <label>
         <input type="checkbox" id="español" value="español"/>
@@ -46,13 +46,16 @@
         <input type="checkbox" id="ingles" value="ingles" />
         <span>Inglés</span>
       </label>
-      
+  </div>
     <div class="row col s4 offset-s5">
         <button class="btn waves-effect waves-light" aria-label="boton" type="submit" name="action" onclick="enviarForm()">
                         Enviar
               <i class="material-icons right">send</i>
         </button>
     </div>
+
+    </div>
+    <div id="error_msg" class="col s6 red-text text-darken-1 offset s3" aria-live="polite">
 
     </div>
   </div>

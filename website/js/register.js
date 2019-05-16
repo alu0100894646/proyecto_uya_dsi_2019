@@ -17,14 +17,14 @@ function register() {
                 if (errorCode == 'auth/weak-password') {
                     alert('The password is too weak.');
                 } else {
-                    error_message.innerHTML = "<p role="alert">"+errorMessage+"</p>";
+                    error_message.innerHTML = "<p>"+errorMessage+"</p>";
                 }
                 console.log(error);
             });
     }
     else {
 
-        error_message.innerHTML = "<p role="alert"> El Email o la contraseña introducidos no coinciden </p>";
+        error_message.innerHTML = "<p> El Email o la contraseña introducidos no coinciden </p>";
     }
 
     firebase.auth().onAuthStateChanged(function (user) {
@@ -36,4 +36,3 @@ function register() {
         }
     });
 }
-
