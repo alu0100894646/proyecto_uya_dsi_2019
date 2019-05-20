@@ -3,6 +3,8 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
+        <link rel="icon" href="favicon.png" alt="book"/>
+
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
@@ -14,64 +16,86 @@
     </head>
     <body>
         <div>
+            <!--NavBar Full size-->
             <nav>
-                <div class="nav-wrapper blue lighten-1" aria-label="MenÃº principal">
-                    <a href="#" class="brand-logo" role="link">Logo</a>
+                <div class="nav-wrapper blue lighten-1" aria-label="Menu principal">
+                    <a href="#" class="brand-logo" role="link"><i class="material-icons">book</i> ForoBooks</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right "><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
-                        <li role="none"><a href="sass.html" role="menuitem">Inicio</a></li>
-                        <li role="none"><a href="badges.html" role="menuitem">Â¿QuÃ© ofrecemos?</a></li>
-                        <li role="none"><a href="collapsible.html" role="menuitem">Sobre nosotros</a></li>
+                        <li role="none"><a href="#" role="menuitem">Inicio</a></li>
+                        <li role="none"><a href="#" role="menuitem">¿Que ofrecemos?</a></li>
+                        <li role="none"><a href="#" role="menuitem">Sobre nosotros</a></li>
                         <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
-                        <li role="none"><a href="login.html" role="menuitem">IdentifÃ­cate</a></li>
+                        <li role="none"><a href="login.html" role="menuitem">Identifi­cate</a></li>
                     </ul>
                 </div>
             </nav>
+            <!--Navbar mobile size-->
+            <ul id="mobile-demo" class="sidenav" role="menu">
+                <li role="none"><a href="#" role="menuitem">Inicio</a></li>
+                <li role="none"><a href="#" role="menuitem">¿Que ofrecemos?</a></li>
+                <li role="none"><a href="#" role="menuitem">Sobre nosotros</a></li>
+                <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
+                <li role="none"><a href="login.html" role="menuitem">Identifi­cate</a></li>
+            </ul>
 
             <div id="index-banner" class="parallax-container" role="main" aria-labelledby="name_header">
                 <div class="section no-pad-bot">
                     <div class="container">
                         <br />
-                        <h1 id="name_header" class="header center teal-text text-lighten-2" role="heading" aria-level="1">ForoIdea</h1>
+                        <h1 id="name_header" class="header center white-text text-darken-2" role="heading" aria-level="1">ForoBooks</h1>
                         <div class="row center" aria-labelledby="description_line">
-                            <h5 id="description_line" class=" header col s12 light" role="heading" aria-level="2">DescripciÃ³n/frase</h5>
+                            <h5 id="description_line" class=" header col s12 light white-text" role="heading" aria-level="2">Si eres un amante de los libros acabas de llegar a la plataforma perfecta para ti</h5>
                         </div>
                     </div>
                 </div>
-                <div class="parallax"><img src="indice.jpeg" alt="Parallax-Background Image 1"/></div>
+                <div class="parallax"><img src="libreria.jpg" alt="Libreria" /></div>
             </div>
 
-            <div id="icon-description" class="container deep-purple accent-1" aria-label="Items aÃºn por definir">
+            <div id="icon-description" class="blue lighten-1" aria-label="Items aun por definir">
                 <div class="section" role="region">
                     <div class="row">
 
                         <div class="col s12 m4" role="presentation">
                             <div class="icon-block" aria-describedby="desc_1">
-
-                                <h2 class="center brown-text"><i class="material-icons" tabindex="0">Icon1</i></h2>
-                                <h5 class="center">Item1</h5>
-                                <p id="desc_1" class="light center">DescripciÃ³n</p>
+                                <h2 class="center black-text"><i class="material-icons" tabindex="0">people</i></h2>
+                                <h5 class="center">¡Registrate!</h5>
+                                <p id="desc_1" class="light center">Conviertete en parte de nuestra comunidad de lectores</p>
                             </div>
                         </div>
 
                         <div class="col s12 m4" role="presentation">
                             <div class="icon-block" aria-describedby="desc_2">
-                                <h2 class="center brown-text"><i class="material-icons" tabindex="0">Icon2</i></h2>
-                                <h5 class="center">Item1</h5>
-                                <p id="desc_2" class="light center">DescripciÃ³n</p>
+                                <h2 class="center black-text"><i class="material-icons" tabindex="0">search</i></h2>
+                                <h5 class="center">Buscador de Libros</h5>
+                                <p id="desc_2" class="light center">Encuentra todo tipo de libros en nuestras bases de datos</p>
                             </div>
                         </div>
 
                         <div class="col s12 m4" role="presentation">
                             <div class="icon-block" aria-describedby="desc_3">
-                                <h2 class="center brown-text"><i class="material-icons" tabindex="0">Icon3</i></h2>
-                                <h5 class="center">Item1</h5>
-                                <p id="desc_3" class="light center">DescripciÃ³n</p>
+                                <h2 class="center black-text"><i class="material-icons" tabindex="0">favorite</i></h2>
+                                <h5 class="center">Lista de libros</h5>
+                                <p id="desc_3" class="light center">Añade los libros a tu lista de favoritos</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <br/>
+
+
+            <div class="parallax-container valign-wrapper">
+                <div class="section no-pad-bot">
+                    <div class="container">
+                        <div class="row center">
+                            <h2 class="header col s12 m4 center black-text">Sobre Nosotros</h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>     
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
@@ -80,7 +104,7 @@
             <div class="row">
                 <div class="col l6 s12" aria-describedby="project" aria-labelledby="name_project">
                     <h5 id="name_project" class="white-text">Trabajo Final</h5>
-                    <p id="project" class="grey-text text-lighten-4">DescripciÃ³n del trabajo final</p>
+                    <p id="project" class="grey-text text-lighten-4">Desarrollo de una página web usable y accesible para UYA</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
                     <h5 class="white-text">Integrantes</h5>
@@ -95,7 +119,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Â© 2019 Proyecto para UYA y DSI en la ULL
+                © 2019 Proyecto para UYA y DSI en la ULL
                 <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
             </div>
         </div>
