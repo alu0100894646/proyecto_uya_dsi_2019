@@ -14,12 +14,11 @@
 <body>
     <nav>
         <div class="nav-wrapper blue lighten-1" aria-label="Menu principal">
-            <a href="#" class="brand-logo" role="link"><i class="material-icons">book</i> ForoBooks</a>
+            <a href="#" class="brand-logo" role="link"><i class="material-icons">book</i>ForoBooks</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right "><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
                 <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
                 <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
-                <li role="none"><a href="login.html" role="menuitem">Identifi­cate</a></li>
             </ul>
         </div>
     </nav>
@@ -27,7 +26,6 @@
     <ul id="mobile-demo" class="sidenav" role="menu">
         <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
         <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
-        <li role="none"><a href="login.html" role="menuitem">Identifi­cate</a></li>
     </ul>
     <div class="row" id="main_login">
         <div class="card-panel blue lighten-5 col s6 offset-s3" role="heading" aria-level="1"><h1 class="center-align">¡Identificate!</h1></div>
@@ -37,7 +35,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="email" type="email" class="validate" aria-required="true" aria-invalid="false" aria-labelledby="correo" required>
-                        <label id="correo" for="email">Correo ElectrÃ³nico</label>
+                        <label id="correo" for="email">Correo Electronico</label>
                         <span class="helper-text" data-error="email no valido" data-success="¡Correcto!" role="alert">ejemplo@dominio.com</span>
                     </div>
                 </div>
@@ -48,7 +46,7 @@
                     </div>
                 </div>
                 <div class="row col s4 offset-s4">
-                    <button class="btn waves-effect waves-light" type="submit" name="action" onclick="login()" aria-label="Send">
+                    <button class="btn waves-effect waves-light" tabindex="0" type="submit" name="action" onclick="login()" aria-label="Send">
                         Enviar
                         <i class="material-icons right">send</i>
                     </button>
