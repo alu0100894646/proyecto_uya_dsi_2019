@@ -1,0 +1,21 @@
+body,html{
+  height: 100%;
+}
+
+#main_login{
+  height: 100%;
+}
+
+#login_text{
+    font-size:400%;
+}
+
+#breadcrumbs_id {
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 650px){
+    #login_text {
+        font-size: 200%;
+    }
+}

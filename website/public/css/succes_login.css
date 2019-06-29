@@ -1,0 +1,27 @@
+﻿body
+{
+}
+#form_text{
+    font-size:400%;
+}
+
+#biblioteca_text {
+    font-size: 400%;
+}
+
+@media screen and (max-width: 900px) {
+    #form_text {
+        font-size: 250%;
+    }
+    #biblioteca_text{
+        font-size:250%;
+    }
+}
+
+#error_msg {
+    color: red;
+}
+
+#breadcrumbs_id{
+    padding-left:10px;
+}

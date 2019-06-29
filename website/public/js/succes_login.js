@@ -9,7 +9,7 @@ function enviarForm() {
     var autor = document.getElementById('autor').value;
     var values = $('#genero').val();
 
-    var checkEsp = $('#español:checked').val();
+    var checkEsp = $('#esp:checked').val();
     var checkEng = $('#ingles:checked').val();
     var idiomas = [];
 
@@ -42,14 +42,32 @@ function enviarForm() {
 function carousel_data() {
     var ref = firebase.database().ref('books/');
     var tbody = document.getElementById('tablebody');
-
+    tbody.innerHTML = "";
     ref.once('value').then(function (snapshot) {
 
         snapshot.forEach(function (childSnapshot) {
             var key = childSnapshot.key;
             var data = childSnapshot.val();
-            tbody.innerHTML += "<tr><td>" + data.Titulo + "</td><td>" + data.Autor + "</td></tr>";
-            console.log(data.Titulo);
+            var idiomas = data.Idiomas;
+            var idiomas_fixed;
+
+            if (idiomas.length == 1)
+                idiomas_fixed = idiomas[0];
+            if (idiomas.length == 2)
+                idiomas_fixed = idiomas[0] + " y " + idiomas[1];
+
+            var generos = data.Genero;
+            var generos_fixed = "";
+            console.log(generos);
+
+            var i;
+
+            for (i = 0; i < generos.length; i++)
+                generos_fixed += generos[i] + " ";
+
+
+            tbody.innerHTML += "<tr><td tabindex=\"0\">" + data.Titulo + "</td><td tabindex=\"0\">" + data.Autor + "</td><td tabindex=\"0\">" + idiomas_fixed + "</td><td tabindex=\"0\">" + generos_fixed + "</td></tr>";
+            //console.log(data);
         });
     });
 }
@@ -57,4 +75,13 @@ function carousel_data() {
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function log_off() {
+
+    firebase.auth().signOut().then(function () {
+        window.location.href = "index.html";
+    }).catch(function (error) {
+        // An error happened.
+    });
 }

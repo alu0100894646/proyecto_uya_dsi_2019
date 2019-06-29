@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" rel="stylesheet" href="css/login_css.css"/>
+    <link type="text/css" rel="stylesheet" href="css/login.css"/>
     <title>ForoIdea-Login</title>
 </head>
 <body>
@@ -18,17 +18,25 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right "><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
                 <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
-                <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
+                <li role="none"><a href="register.html" role="menuitem">Regístrate</a></li>
             </ul>
         </div>
     </nav>
     <!--Navbar mobile size-->
     <ul id="mobile-demo" class="sidenav" role="menu">
         <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
-        <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
+        <li role="none"><a href="register.html" role="menuitem">Regístrate</a></li>
     </ul>
+    <nav>
+        <div class="nav-wrapper blue lighten-1">
+            <div id="breadcrumbs_id" class="col s12">
+                <a href="index.html" class="breadcrumb">Inicio</a>
+                <a href="#!" class="breadcrumb">Login</a>
+            </div>
+        </div>
+    </nav>
     <div class="row" id="main_login">
-        <div class="card-panel blue lighten-5 col s6 offset-s3" role="heading" aria-level="1"><h1 class="center-align">¡Identificate!</h1></div>
+        <div class="card-panel blue lighten-5 col s6 offset-s3" role="heading" aria-level="1" tabindex="0"><h1 id="login_text" class="center-align">¡Identifícate!</h1></div>
 
         <div class="row">
             <div class="col s6 offset-s3 blue lighten-5" role="log">
@@ -86,7 +94,7 @@
 <footer class="page-footer blue lighten-1" role="contentinfo">
   <div class="footer-copyright">
       <div class="container">
-          Â© 2019 Proyecto para UYA y DSI en la ULL
+          © 2019 Proyecto para UYA y DSI en la ULL
           <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
       </div>
   </div>

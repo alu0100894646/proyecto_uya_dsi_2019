@@ -1,0 +1,16 @@
+﻿body
+{
+}
+#register_text {
+    font-size: 400%;
+}
+
+@media screen and (max-width: 600px){
+    #register_text{
+        font-size:200%;
+    }
+}
+
+#breadcrumbs_id {
+    padding-left: 10px;
+}

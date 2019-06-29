@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140781142-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140781142-1', { 'optimize_id': 'GTM-TLSJTHS' });
+    </script>
+
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <script>
+    (function (a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y; h.start = 1 * new Date;
+            h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+            (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+            { 'GTM-TLSJTHS': true });
+    </script>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon.png" alt="book" />
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ForoBooks</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+</head>
+    <body>
+        <div>
+            <!--NavBar Full size-->
+            <nav>
+                <div class="nav-wrapper blue lighten-1" aria-label="Menu principal">
+                    <a id="forobook" href="#" class="brand-logo" role="link"><i class="material-icons">book</i> ForoBooks</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right "><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
+                        <li role="none"><a href="register.html" role="menuitem">Regístrate</a></li>
+                        <li role="none"><a href="login.html" role="menuitem">Identifícate</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Navbar mobile size-->
+            <ul id="mobile-demo" class="sidenav" role="menu">
+                <li role="none"><a href="register.html" role="menuitem">Regístrate</a></li>
+                <li role="none"><a href="login.html" role="menuitem">Identifí­cate</a></li>
+            </ul>
+            <nav>
+                <div class="nav-wrapper blue lighten-1">
+                    <div id="breadcrumbs_id" class="col s12">
+                        <a href="index.html" class="breadcrumb">Inicio</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <div id="index-banner" class="parallax-container" role="main" aria-labelledby="name_header">
+                <div class="section no-pad-bot">
+                    <div class="container">
+                        <br />
+                        <h1 id="name_header" class="header center white-text text-darken-2" role="heading" aria-level="1" tabindex="0">ForoBooks</h1>
+                        <div class="row center" aria-labelledby="description_line">
+                            <h5 id="description_line" class="header col s12 light white-text" role="heading" aria-level="2" tabindex="0">Si eres un amante de los libros acabas de llegar a la plataforma perfecta para ti</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="parallax"><img src="libreria.jpg" alt="Libreria" /></div>
+            </div>
+            <div id="offer" class="blue lighten-1">
+                <div id="icon-description" class="container white" aria-label="Items aun por definir">
+                    <div class="section" role="region">
+                        <div class="row">
+
+                            <div class="col s12 m4" role="presentation">
+                                <div class="icon-block" aria-describedby="desc_1">
+                                    <h2 class="center black-text"><i class="material-icons" tabindex="0">people</i></h2>
+                                    <h5 class="center" tabindex="0">¡Registrate!</h5>
+                                    <p id="desc_1" class="light center" tabindex="0">Conviertete en parte de nuestra comunidad de lectores</p>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4" role="presentation">
+                                <div class="icon-block" aria-describedby="desc_2">
+                                    <h2 class="center black-text"><i class="material-icons" tabindex="0">search</i></h2>
+                                    <h5 class="center" tabindex="0">Buscador de Libros</h5>
+                                    <p id="desc_2" class="light center" tabindex="0">Encuentra todo tipo de libros en nuestras bases de datos</p>
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4" role="presentation">
+                                <div class="icon-block" aria-describedby="desc_3">
+                                    <h2 class="center black-text"><i class="material-icons" tabindex="0">favorite</i></h2>
+                                    <h5 class="center" tabindex="0">Lista de libros</h5>
+                                    <p id="desc_3" class="light center" tabindex="0">Añade los libros a tu lista de favoritos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row blue lighten-2">
+                <div class="row col s8 offset-s2">
+                    <h1 class="center" tabindex="0">Sobre Nosotros</h1>
+                </div>
+                <div class="row col center">
+                    <h2 tabindex="0">Somos un grupo de estudiantes de la Universidad de la Laguna que hemos desarrollado un proyecto para la Asignatura de Usabilidad y Accesibilidad</h2>
+                </div>
+                <div class="row col s8 offset-s2 center">
+                    <h3 tabindex="0">La aplicación consiste en un formulario para introducir libros en una base de datos, y en una tabla te muestra todos los libros que contiene dicha base de datos</h3>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+    <footer class="page-footer blue lighten-1" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col  s12 l6" aria-describedby="project" aria-labelledby="name_project">
+                    <h5 id="name_project" class="white-text" tabindex="0">Trabajo Final</h5>
+                    <p id="project" class="grey-text text-lighten-4" tabindex="0">Desarrollo de una página web usable y accesible para UYA</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text" tabindex="0">Integrantes</h5>
+                    <ul role="menu">
+                        <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">Alberto Dorta Darias</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">Jaime Rodrí­guez Pérez</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!" role="menuitem">José Francisco Rodríguez Hernández</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container" tabindex="0">
+                © 2019 Proyecto para UYA y DSI en la ULL
+                <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
+            </div>
+        </div>
+    </footer>
+</html>

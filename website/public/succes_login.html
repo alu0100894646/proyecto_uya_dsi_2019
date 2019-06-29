@@ -9,46 +9,52 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/succes_login.css" />
     <title>ForoIdeaSuccesfull Login</title>
 </head>
 <body onload="setTimeout(carousel_data,3)">
     <div>
+        <!--NavBar Full size-->
         <nav>
             <div class="nav-wrapper blue lighten-1" aria-label="Menu principal">
                 <a id="forobook" href="#" class="brand-logo" role="link"><i class="material-icons">book</i> ForoBooks</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right "><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down" role="menu">
-                    <li role="none"><a href="#" role="menuitem">¿Que ofrecemos?</a></li>
-                    <li role="none"><a href="#" role="menuitem">Sobre nosotros</a></li>
-                    <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
-                    <li role="none"><a href="login.html" role="menuitem">Identifi­cate</a></li>
+                    <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+                    <li role="none" onclick="log_off()"><a href="#!" role="menuitem">Desconectar</a></li>
                 </ul>
             </div>
         </nav>
         <!--Navbar mobile size-->
         <ul id="mobile-demo" class="sidenav" role="menu">
-            <li role="none"><a href="#" role="menuitem">¿Que ofrecemos?</a></li>
-            <li role="none"><a href="#" role="menuitem">Sobre nosotros</a></li>
-            <li role="none"><a href="register.html" role="menuitem">Registrate</a></li>
-            <li role="none"><a href="login.html" role="menuitem">Identifi­cate</a></li>
+            <li role="none"><a href="index.html" role="menuitem">Inicio</a></li>
+            <li role="none"><a href="#!" role="menuitem" onclick="log_off()"><i class="material-icons" tabindex="0">power_off</i>Desconexión</a></li>
         </ul>
-
+        <nav>
+            <div class="nav-wrapper blue lighten-1">
+                <div id="breadcrumbs_id" class="col s12">
+                    <a href="index.html" class="breadcrumb">Inicio</a>
+                    <a href="#!" class="breadcrumb">Conectado Correctamente</a>
+                </div>
+            </div>
+        </nav>
         <div>
             <div class="row">
-                <div class="col s4 offset-s1 card teal lighten-4">
-                    Formulario
-                    <div class="row input-field">
+                <div class="col s4 offset-s1 card teal lighten-4 text-black">
+                    <h1 id="form_text" tabindex="0">Formulario</h1>
 
-                            <input placeholder="Titulo" id="titulo" type="text" class="validate" aria-describedby="descripciontitulo" aria-required="true" required>
-                            <label for="titulo"></label>
-                    </div>
                     <div class="row input-field">
-                            <input placeholder="Autor" id="autor" type="text" class="validate" aria-required="true" required>
-                            <label for="autor"></label>
+                        <input id="titulo" type="text" class="validate" aria-describedby="descripciontitulo" aria-required="true" required>
+                        <label for="titulo">Introduzca el título del libro</label>
+                    </div>
+
+                    <div class="row input-field">
+                        <input id="autor" type="text" class="validate" aria-required="true" required>
+                        <label for="autor">Introduzca el autor del libro</label>
                     </div>
                     <div class="row">
                         <select id="genero" multiple="multiple" required>
-                            <option value="" disabled>Elija una opcion</option>
+                            <option value="" disabled>Seleccione género</option>
                             <option value="Aventuras">Aventuras</option>
                             <option value="Ciencia_Ficcion">Ciencia Ficción</option>
                             <option value="Drama">Drama</option>
@@ -58,7 +64,7 @@
                     <div class="row">
                         <div class="col">
                             <label>
-                                <input type="checkbox" id="español" value="español" />
+                                <input type="checkbox" id="esp" value="español" />
                                 <span>Español</span>
                             </label>
                         </div>
@@ -69,27 +75,26 @@
                             </label>
                         </div>
                     </div>
-                    <div class="row input-field">
+                    <div class="row col s4 offset-s1 input-field">
                         <button class="btn-large waves-effect waves-light" aria-label="boton" type="submit" name="action" onclick="enviarForm()">Enviar<i class="material-icons right">send</i></button>
                     </div>
-                    <div class="row" tabindex="0" id="error_msg">
+                    <div class="row col s4 offset-s1 text-red" tabindex="0" id="error_msg">
                     </div>
                 </div>
                 <div class="col s4 offset-s1 card teal lighten-4">
-                    Biblioteca
-                    <div class="btn" onclick="carousel_data()">USAME</div>
+                    <h1 id="biblioteca_text" tabindex="0">Biblioteca</h1>
+                    <div class="btn" onclick="carousel_data()">Actualizar <i class="large material-icons">autorenew</i></div>
                     <div>
                         <table class="highlight responsive-table">
                             <thead>
                                 <tr>
-                                    <th>Titulo</th>
-                                    <th>Autor</th>
-                                    <th>Idiomas</th>
+                                    <th tabindex="0">Titulo</th>
+                                    <th tabindex="0">Autor</th>
+                                    <th tabindex="0">Idiomas</th>
+                                    <th tabindex="0">Género</th>
                                 </tr>
                             </thead>
-                            <tbody id="tablebody">
-
-                            </tbody>
+                            <tbody id="tablebody"></tbody>
                         </table>
                     </div>
                 </div>
@@ -98,23 +103,23 @@
                 <a class="btn-floating btn-large orange darken-4"><i class="large material-icons">arrow_upward</i></a>
             </div>
         </div>
-        
+
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script src="js/succes_login.js"></script>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
         <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#config-web-app -->
+        https://firebase.google.com/docs/web/setup#config-web-app -->
         <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
         <script>
             $(document).ready(function () {
-                $('select').formSelect();  
+                $('select').formSelect();
                 $('.fixed-action-btn').floatingActionButton();
             });
 
-
-
+            // Your web app's Firebase configuration
             var firebaseConfig = {
                 apiKey: "AIzaSyAFlF9buXw6HuxZGfw9ANjnaQkSP9_dBKI",
                 authDomain: "formulary-f1e07.firebaseapp.com",
@@ -124,6 +129,7 @@
                 messagingSenderId: "405576541388",
                 appId: "1:405576541388:web:44f4753dbf6c680d"
             };
+            // Initialize Firebase
             firebase.initializeApp(firebaseConfig);
         </script>
     </div>
@@ -131,7 +137,7 @@
 <footer class="page-footer blue lighten-1" role="contentinfo">
     <div class="footer-copyright">
         <div class="container">
-            Â© 2019 Proyecto para UYA y DSI en la ULL
+            © 2019 Proyecto para UYA y DSI en la ULL
             <a class="grey-text text-lighten-4 right" href="https://www.ull.es/">Universidad de la Laguna</a>
         </div>
     </div>
